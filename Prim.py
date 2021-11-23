@@ -27,6 +27,7 @@ class Graph:
             if node_2 in self.visited and node_1 not in self.visited:
                 links_to_compare.append([node_1,node_2,way])
 
+
         return links_to_compare
 
     def compare(self,links_to_compare):
@@ -44,42 +45,27 @@ class Graph:
                 return [node_1, node_2, way]
 
 
-
-
-
-
 if __name__ == '__main__':
-    graph = Graph(4)
+    graph = Graph(9)
 
-    graph.add_link(0,1,5)
-    graph.add_link(0,4,6)
-    graph.add_link(1,0,5)
-    graph.add_link(2,4,2)
-    graph.add_link(2,3,1)
-    graph.add_link(1,2,1)
-    graph.add_link(3,4,3)
-    graph.add_link(1,3,2)
-
-
-    # graph.add_link(0,1,4)
-    # graph.add_link(0,7,8)
-    # graph.add_link(1,7,11)
-    # graph.add_link(1,2,8)
-    # graph.add_link(7,8,7)
-    # graph.add_link(7,6,1)
-    # graph.add_link(2,8,2)
-    # graph.add_link(8,6,6)
-    # graph.add_link(6,5,2)
-    # graph.add_link(2,5,4)
-    # graph.add_link(2,3,7)
-    # graph.add_link(3,5,14)
-    # graph.add_link(3,4,9)
-    # graph.add_link(5,4,10)
+    graph.add_link(0,1,4)
+    graph.add_link(0,7,8)
+    graph.add_link(1,7,11)
+    graph.add_link(1,2,8)
+    graph.add_link(7,8,7)
+    graph.add_link(7,6,1)
+    graph.add_link(2,8,2)
+    graph.add_link(8,6,6)
+    graph.add_link(6,5,2)
+    graph.add_link(2,5,4)
+    graph.add_link(2,3,7)
+    graph.add_link(3,5,14)
+    graph.add_link(3,4,9)
+    graph.add_link(5,4,10)
 
     graph.Prim(0)
     print(graph.graph)
     print(graph.new_graph)
-
 
 
 
